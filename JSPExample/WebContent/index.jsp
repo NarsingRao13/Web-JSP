@@ -50,7 +50,7 @@
 			<div class="container" style="margin: 0px; padding: 0px;">
 				<div class="myaccount-details">
 					<div class="myaccount-details-data" id = "register">
-					<a href="Registration.html">Register</a></div>
+					<a href="Register.jsp">Register</a></div>
 					<div class="myaccount-details-data">Password</div>
 					<div class="myaccount-details-data">Saved Carts</div>
 					<div class="myaccount-details-data">Support Tickets</div>
@@ -58,7 +58,7 @@
 
 				<div class="myaccount-details">
 					<div class="myaccount-details-data">
-					<a href="Login.html">Login</a></div>
+					<a href="Login.jsp">Login</a></div>
 					<div class="myaccount-details-data">Order History</div>
 					<div class="myaccount-details-data">Consent Management</div>
 					<div class="myaccount-details-data">Returns History</div>
