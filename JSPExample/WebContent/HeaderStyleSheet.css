@@ -180,7 +180,13 @@ toggled .{
 	text-decoration: none;
 }*/
 
-a {
+.a1 {
 	text-decoration: none;
 	color: white;
+}
+
+
+.a2 a:HOVER{
+	text-decoration: none;
+	color: black;
 }

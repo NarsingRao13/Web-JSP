@@ -13,8 +13,17 @@
 		String pass = request.getParameter("userPass");
 		if(UserDatabase.login(name, pass)) {
 			out.print("You are successfully registered");
-			response.sendRedirect("index.jsp");
-		}
+			
+			///using HttpSession
+			HttpSession httpSession = request.getSession();
+			httpSession.setAttribute("UserName", name);
+			
+			///Uisng Cookies
+			/*Cookie ck = new Cookie("UserName",(String)name);
+			response.addCookie(ck);*/
+			
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
+;		}
 		else {
 			out.print("Sorry username or password error");
 		}

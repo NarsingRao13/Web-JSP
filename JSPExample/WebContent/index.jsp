@@ -37,20 +37,32 @@
 
 	</script>
 
+	<%
+		///HttpSession
+		HttpSession httpSession = request.getSession();
+		String s = (String) httpSession.getAttribute("UserName");
+		
+		/*Cookie ck[] = request.getCookies();
+		String s  = ck[0].getValue();
+		System.out.println(ck[0].getName()+" , "+ck[0].getValue());*/
+		if (s == null)
+			s = "";
+	%>
+
 	<header>
 		<div id="headerpart">
 			<div id="header-first-part" class="headers">
 				<div id="header-title">
 					B<span style="font-size: medium;">2</span>C Acclerator
 				</div>
-				<div class="header-one-right">SIGN OUT</div>
+				<div class="header-one-right"><a class = "a2" href="Logout.jsp">SIGN OUT</a></div>
 				<div class="header-one-right" id="account">MY ACCOUNT</div>
-				<div class="header-one-right">WELCOME SAI SRIRAM</div>
+				<div class="header-one-right">WELCOME <span><%=s%></span></div>
 			</div>
 			<div class="container" style="margin: 0px; padding: 0px;">
 				<div class="myaccount-details">
-					<div class="myaccount-details-data" id = "register">
-					<a href="Register.jsp">Register</a></div>
+					<div class="myaccount-details-data" >
+					<a href="Register.jsp" class = "a1">Register</a></div>
 					<div class="myaccount-details-data">Password</div>
 					<div class="myaccount-details-data">Saved Carts</div>
 					<div class="myaccount-details-data">Support Tickets</div>
@@ -58,7 +70,8 @@
 
 				<div class="myaccount-details">
 					<div class="myaccount-details-data">
-					<a href="Login.jsp">Login</a></div>
+					<a href="Login.jsp" class = "a1">Login</a></div>
+					
 					<div class="myaccount-details-data">Order History</div>
 					<div class="myaccount-details-data">Consent Management</div>
 					<div class="myaccount-details-data">Returns History</div>
