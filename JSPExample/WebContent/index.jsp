@@ -38,15 +38,22 @@
 	</script>
 
 	<%
+		String s ="";
 		///HttpSession
 		HttpSession httpSession = request.getSession();
-		String s = (String) httpSession.getAttribute("UserName");
-		
-		/*Cookie ck[] = request.getCookies();
-		String s  = ck[0].getValue();
-		System.out.println(ck[0].getName()+" , "+ck[0].getValue());*/
+		s = (String) httpSession.getAttribute("UserName");
 		if (s == null)
 			s = "";
+		
+		//Cookies
+		/*Cookie ck[] = request.getCookies();
+		System.out.println(ck[0]);
+		if(ck[0] != null){
+			 s  = ck[0].getValue();
+		//System.out.println(ck[0].getName()+" , "+ck[0].getValue());
+		if (s == null)
+			s = "";
+		}*/
 	%>
 
 	<header>

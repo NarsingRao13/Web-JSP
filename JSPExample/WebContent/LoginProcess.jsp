@@ -17,9 +17,10 @@
 			///using HttpSession
 			HttpSession httpSession = request.getSession();
 			httpSession.setAttribute("UserName", name);
-			
+			httpSession.setAttribute("loginState","true");
 			///Uisng Cookies
-			/*Cookie ck = new Cookie("UserName",(String)name);
+			/*System.out.println(name);
+			Cookie ck = new Cookie("UserName",name.toString());
 			response.addCookie(ck);*/
 			
 			request.getRequestDispatcher("/index.jsp").forward(request, response);
